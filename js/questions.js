@@ -1,0 +1,41 @@
+const correctAnswers = {
+  q1: ["round", "type"],
+  q2: ["sqrt", "log", "pi"],
+  q3: ["split", "len"],
+  q4: ["pi", "sin", "2"],
+  q5: ["float", "sqrt", "**", ".4f"],
+  q6: ["lambda", "math.e"],
+  q7: ["x", "2", "c", "lambda"],
+  q8: ["x", "3", "h"],
+  q9: ["3", "4", "superficie_esfera"],
+  q10: ["formula", "lambda", "pi", "volumen"],
+  q11: ["lambda", "0"],
+  q12: ["lambda", "pi", "e", "2"],
+  q13: ["lambda", "pi", "1"],
+  q14: ["2", "f2", "1"],
+  q15: ["x", "lambda", "compuesta"],
+  q16: ["exp", "log"],
+  q17: ["**"],
+  q18: ["P0", "exp", "t"],
+  q19: ["pi", "exp", "input"],
+  q20: ["log", "-", "t"],
+  q21: ["log", "x"],
+  q22: ["log"],
+  q23: ["log", "x"],
+  q24: ["b", "log"],
+  q25: ["log", "log10", "float"],
+  q26: ["func", "h", "f"],
+  q27: ["sqrt", "log", "pi"],
+  q28: ["n", "t", "exp", "float"],
+  q29: ["log10", "P0"],
+  q30: ["2", "0.5"]
+};
+
+const pointValues = {
+  q1: 1, q2: 2, q3: 1, q4: 2, q5: 2,
+  q6: 2, q7: 2, q8: 2, q9: 2, q10: 2,
+  q11: 1, q12: 2, q13: 1, q14: 2, q15: 2,
+  q16: 1, q17: 1, q18: 2, q19: 2, q20: 2,
+  q21: 1, q22: 1, q23: 2, q24: 2, q25: 2,
+  q26: 2, q27: 2, q28: 2, q29: 1, q30: 1
+};

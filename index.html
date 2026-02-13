@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Primer Parcial de Programaci&oacute;n - Funciones Matem&aacute;ticas con &pi; y e</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50">
+<div class="container mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold text-center text-blue-700 border-b-2 border-blue-500 pb-4 mb-6">Primer Parcial de Programaci&oacute;n</h1>
+  <h2 class="text-xl font-semibold text-center text-blue-600 mb-8">Funciones Matem&aacute;ticas con &pi; y e &mdash; Nivel Avanzado (50 puntos - 30 preguntas)</h2>
+
+  <!-- Informaci&oacute;n del estudiante -->
+  <div class="bg-blue-50 p-5 rounded-lg shadow-sm mb-6">
+    <h3 class="text-lg font-semibold text-blue-800 mb-4">Informaci&oacute;n del Estudiante</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div>
+        <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo:</label>
+        <input type="text" id="nombre" placeholder="Ingrese su nombre completo" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="apellidos" class="block text-sm font-medium text-gray-700 mb-1">Apellidos Completos:</label>
+        <input type="text" id="apellidos" placeholder="Ingrese sus apellidos" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo Electr&oacute;nico:</label>
+        <input type="email" id="email" placeholder="Ingrese su correo electr&oacute;nico" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+      </div>
+    </div>
+  </div>
+
+  <!-- Instrucciones -->
+  <div class="bg-yellow-50 p-5 rounded-lg border-l-4 border-yellow-400 mb-6">
+    <h3 class="text-lg font-semibold text-gray-800 mb-2">Instrucciones Generales</h3>
+    <ul class="list-disc pl-5 space-y-1">
+      <li>Completa los <strong>espacios en blanco</strong> en cada fragmento de c&oacute;digo Python.</li>
+      <li>Los espacios est&aacute;n marcados con <span class="code-placeholder">[...]</span>.</li>
+      <li>Haz clic en <strong>&quot;Verificar Respuesta&quot;</strong> en cada pregunta para obtener retroalimentaci&oacute;n.</li>
+      <li>Cuando completes todas las preguntas, haz clic en <strong>&quot;Calcular Nota Final&quot;</strong>.</li>
+      <li>El resultado de tu evaluaci&oacute;n se enviar&aacute; autom&aacute;ticamente por correo electr&oacute;nico.</li>
+    </ul>
+  </div>
+
+  <!-- Barra de progreso -->
+  <div class="w-full bg-gray-200 rounded-full h-6 mb-8">
+    <div id="progress-bar" class="bg-green-500 h-6 rounded-full text-center text-white text-sm leading-6" style="width: 0%">0%</div>
+  </div>
+
+  <h2 class="text-xl font-semibold text-gray-800 mb-6">Secci&oacute;n de Preguntas (Total: 50 Puntos - 30 Preguntas)</h2>
+
+  <!-- Contenedor de Preguntas -->
+  <div id="questions-container" class="space-y-8">
+
+    <!-- ================================================================== -->
+    <!-- SECCI&Oacute;N A: Fundamentos Avanzados de Python -->
+    <!-- ================================================================== -->
+    <h3 class="text-lg font-semibold text-blue-600 border-b border-blue-300 pb-2">Secci&oacute;n A &mdash; Fundamentos Avanzados: funciones integradas, math y f-strings (8 puntos)</h3>
+
+    <!-- Pregunta 1 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q1">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">1. round() y type() con f-string</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que redondea &pi; a 4 decimales y muestra su tipo de dato.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la funci&oacute;n integrada de redondeo y la que devuelve el tipo de un objeto.</p>
+        <p class="text-xs text-blue-700 mt-1"><strong>Recuerda:</strong> <code>round(numero, decimales)</code> redondea un n&uacute;mero. <code>type(objeto)</code> devuelve su tipo de dato (float, int, str...).</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+pi = math.pi
+print(f"&pi; redondeado: {<span class="code-placeholder" id="q1-part1" contenteditable="true">[...]</span>(pi, 4)}")
+print(f"Tipo: {<span class="code-placeholder" id="q1-part2" contenteditable="true">[...]</span>(pi).__name__}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>&pi; redondeado: 3.1416</code> y <code>Tipo: float</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(1)">Verificar Respuesta</button>
+      <div id="q1-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 2 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q2">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">2. Funciones Matem&aacute;ticas Anidadas</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que calcula &radic;(ln(x) + &pi;) usando funciones anidadas de <code>math</code>.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use ra&iacute;z cuadrada, logaritmo natural y la constante &pi; del m&oacute;dulo math.</p>
+        <p class="text-xs text-blue-700 mt-1"><strong>Recuerda:</strong> <code>math.sqrt(x)</code> = &radic;x, <code>math.log(x)</code> = ln(x), <code>math.pi</code> = &pi;.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+x = float(input("N&uacute;mero positivo: "))
+resultado = math.<span class="code-placeholder" id="q2-part1" contenteditable="true">[...]</span>(math.<span class="code-placeholder" id="q2-part2" contenteditable="true">[...]</span>(x) + math.<span class="code-placeholder" id="q2-part3" contenteditable="true">[...]</span>)
+print(f"&radic;(ln({x}) + &pi;) = {resultado:.4f}")</pre>
+      </div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(2)">Verificar Respuesta</button>
+      <div id="q2-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 3 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q3">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">3. Descomposici&oacute;n de Euler con M&eacute;todos de String</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que separa la parte entera y decimal de <em>e</em> usando m&eacute;todos de cadena.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use el m&eacute;todo que divide una cadena por un separador y la funci&oacute;n para contar caracteres.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+euler_str = str(math.e)
+parte_entera, parte_decimal = euler_str.<span class="code-placeholder" id="q3-part1" contenteditable="true">[...]</span>(".")
+print(f"e tiene {<span class="code-placeholder" id="q3-part2" contenteditable="true">[...]</span>(parte_decimal)} d&iacute;gitos decimales")</pre>
+      </div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(3)">Verificar Respuesta</button>
+      <div id="q3-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 4 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q4">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">4. Identidad Trigonom&eacute;trica sin&sup2; + cos&sup2; = 1</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que verifica la identidad trigonom&eacute;trica sin&sup2;(x) + cos&sup2;(x) = 1.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la constante de &pi; para convertir grados a radianes, la funci&oacute;n seno y el exponente.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+grados = float(input("&Aacute;ngulo en grados: "))
+radianes = grados * math.<span class="code-placeholder" id="q4-part1" contenteditable="true">[...]</span> / 180
+seno = math.<span class="code-placeholder" id="q4-part2" contenteditable="true">[...]</span>(radianes)
+coseno = math.cos(radianes)
+print(f"sin&sup2; + cos&sup2; = {seno ** 2 + coseno ** <span class="code-placeholder" id="q4-part3" contenteditable="true">[...]</span>:.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada (cualquier &aacute;ngulo): <code>sin&sup2; + cos&sup2; = 1.0000</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(4)">Verificar Respuesta</button>
+      <div id="q4-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 5 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q5">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">5. Teorema de Pit&aacute;goras con math.sqrt</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que calcula la hipotenusa usando el teorema de Pit&aacute;goras: c = &radic;(a&sup2; + b&sup2;).</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Convierta la entrada a decimal, use la ra&iacute;z cuadrada de math, el operador de potencia y el formato.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+a = <span class="code-placeholder" id="q5-part1" contenteditable="true">[...]</span>(input("Cateto a: "))
+b = float(input("Cateto b: "))
+hipotenusa = math.<span class="code-placeholder" id="q5-part2" contenteditable="true">[...]</span>(a <span class="code-placeholder" id="q5-part3" contenteditable="true">[...]</span> 2 + b ** 2)
+print(f"Hipotenusa = {hipotenusa:<span class="code-placeholder" id="q5-part4" contenteditable="true">[...]</span>}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Ejemplo con a=3, b=4: <code>Hipotenusa = 5.0000</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(5)">Verificar Respuesta</button>
+      <div id="q5-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- SECCI&Oacute;N B: Funciones Polin&oacute;micas Avanzadas -->
+    <!-- ================================================================== -->
+    <h3 class="text-lg font-semibold text-blue-600 border-b border-blue-300 pb-2">Secci&oacute;n B &mdash; Funciones Polin&oacute;micas: lambda, par&aacute;metros por defecto y funciones de orden superior (10 puntos)</h3>
+
+    <!-- Pregunta 6 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q6">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">6. Derivada Simb&oacute;lica con lambda</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que define f(x) = &pi;x&sup2; + ex - 1 y su derivada f'(x) = 2&pi;x + e usando lambda.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la palabra clave para funciones an&oacute;nimas y la constante de Euler de math.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+f = lambda x: math.pi * x**2 + math.e * x - 1
+
+derivada = <span class="code-placeholder" id="q6-part1" contenteditable="true">[...]</span> x: 2 * math.pi * x + <span class="code-placeholder" id="q6-part2" contenteditable="true">[...]</span>
+
+print(f"f(1)  = {f(1):.4f}")
+print(f"f'(1) = {derivada(1):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>f(1) = 4.8599</code> y <code>f'(1) = 9.0015</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(6)">Verificar Respuesta</button>
+      <div id="q6-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 7 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q7">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">7. Polinomio con Par&aacute;metros por Defecto</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n con par&aacute;metros por defecto f(x) = ax&sup2; + bx + c donde a=&pi;, b=e, c=-1, y su derivada con lambda.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Defina el par&aacute;metro posicional, el exponente, el par&aacute;metro por defecto y la palabra clave lambda.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def polinomio(<span class="code-placeholder" id="q7-part1" contenteditable="true">[...]</span>, a=math.pi, b=math.e, c=-1):
+    return a * x ** <span class="code-placeholder" id="q7-part2" contenteditable="true">[...]</span> + b * x + <span class="code-placeholder" id="q7-part3" contenteditable="true">[...]</span>
+
+resultado = polinomio(1)
+derivada = <span class="code-placeholder" id="q7-part4" contenteditable="true">[...]</span> x: 2 * math.pi * x + math.e
+print(f"f(1)  = {resultado:.4f}")
+print(f"f'(1) = {derivada(1):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>f(1) = 4.8599</code> y <code>f'(1) = 9.0015</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(7)">Verificar Respuesta</button>
+      <div id="q7-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 8 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q8">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">8. Evaluaci&oacute;n Anidada h(h(0))</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el polinomio h(x) = 2&pi;x&sup3; - ex&sup2; + 5 y eval&uacute;e h(h(0)), es decir, la funci&oacute;n aplicada sobre su propio resultado.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Defina el par&aacute;metro, el exponente c&uacute;bico y la funci&oacute;n que se llama a s&iacute; misma.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def h(<span class="code-placeholder" id="q8-part1" contenteditable="true">[...]</span>):
+    return 2 * math.pi * x ** <span class="code-placeholder" id="q8-part2" contenteditable="true">[...]</span> - math.e * x ** 2 + 5
+
+print(f"h(0) = {h(0):.4f}")
+print(f"h(1) = {h(1):.4f}")
+print(f"h(h(0)) = {h(<span class="code-placeholder" id="q8-part3" contenteditable="true">[...]</span>(0)):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>h(0) = 5.0000</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(8)">Verificar Respuesta</button>
+      <div id="q8-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 9 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q9">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">9. Raz&oacute;n Volumen / Superficie de Esfera</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete las funciones de volumen V=(4/3)&pi;r&sup3; y superficie S=4&pi;r&sup2;, y una tercera funci&oacute;n que calcula su raz&oacute;n V/S.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Complete el exponente c&uacute;bico, el coeficiente 4 y el nombre de la funci&oacute;n invocada.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def volumen_esfera(r):
+    return (4 / 3) * math.pi * r ** <span class="code-placeholder" id="q9-part1" contenteditable="true">[...]</span>
+
+def superficie_esfera(r):
+    return <span class="code-placeholder" id="q9-part2" contenteditable="true">[...]</span> * math.pi * r ** 2
+
+def razon(r):
+    return volumen_esfera(r) / <span class="code-placeholder" id="q9-part3" contenteditable="true">[...]</span>(r)
+
+print(f"V(5)/S(5) = {razon(5):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>V(5)/S(5) = 1.6667</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(9)">Verificar Respuesta</button>
+      <div id="q9-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 10 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q10">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">10. Funci&oacute;n de Orden Superior para F&oacute;rmulas</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que usa una funci&oacute;n de orden superior para aplicar distintas f&oacute;rmulas geom&eacute;tricas.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Invoque el par&aacute;metro que es una funci&oacute;n, defina la lambda, la constante de &pi; y el nombre de la variable.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def aplicar(<span class="code-placeholder" id="q10-part1" contenteditable="true">[...]</span>, valor):
+    return func(valor)
+
+area = <span class="code-placeholder" id="q10-part2" contenteditable="true">[...]</span> r: math.pi * r ** 2
+perimetro = lambda r: 2 * math.<span class="code-placeholder" id="q10-part3" contenteditable="true">[...]</span> * r
+
+r = 5.0
+print(f"&Aacute;rea: {aplicar(area, r):.4f}")
+print(f"Per&iacute;metro: {aplicar(<span class="code-placeholder" id="q10-part4" contenteditable="true">[...]</span>, r):.4f}")</pre>
+      </div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(10)">Verificar Respuesta</button>
+      <div id="q10-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- SECCI&Oacute;N C: Funciones Racionales Avanzadas -->
+    <!-- ================================================================== -->
+    <h3 class="text-lg font-semibold text-blue-600 border-b border-blue-300 pb-2">Secci&oacute;n C &mdash; Funciones Racionales: lambda, derivada simb&oacute;lica y composici&oacute;n (8 puntos)</h3>
+
+    <!-- Pregunta 11 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q11">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">11. Lambda y Composici&oacute;n f(f(0))</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n lambda f(x) = &pi;/(x&sup2;+1) y eval&uacute;e f(f(0)), es decir la funci&oacute;n compuesta consigo misma.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la palabra clave de funci&oacute;n an&oacute;nima y el argumento correcto para la composici&oacute;n.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+f = <span class="code-placeholder" id="q11-part1" contenteditable="true">[...]</span> x: math.pi / (x ** 2 + 1)
+
+print(f"f(0) = {f(0):.4f}")
+print(f"f(f(0)) = {f(f(<span class="code-placeholder" id="q11-part2" contenteditable="true">[...]</span>)):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>f(0) = 3.1416</code> y <code>f(f(0)) = 0.2891</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(11)">Verificar Respuesta</button>
+      <div id="q11-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 12 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q12">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">12. Regla del Cociente: derivada de g(x)=(x&sup2;-&pi;)/(x+e)</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n g(x) y su derivada usando la regla del cociente: g'= [f'h - fh'] / h&sup2;.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use lambda, las constantes de &pi; y e de math, y el exponente del denominador.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def g(x):
+    return (x ** 2 - math.pi) / (x + math.e)
+
+derivada_g = <span class="code-placeholder" id="q12-part1" contenteditable="true">[...]</span> x: (2 * x * (x + math.e) - (x ** 2 - math.<span class="code-placeholder" id="q12-part2" contenteditable="true">[...]</span>)) / (x + math.<span class="code-placeholder" id="q12-part3" contenteditable="true">[...]</span>) ** <span class="code-placeholder" id="q12-part4" contenteditable="true">[...]</span>
+
+print(f"g(2)  = {g(2):.4f}")
+print(f"g'(2) = {derivada_g(2):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>g(2) = 0.1819</code> y <code>g'(2) = 0.8092</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(12)">Verificar Respuesta</button>
+      <div id="q12-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 13 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q13">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">13. Lambda Racional: h(x) = e&middot;x / (x&sup2; + &pi;)</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n lambda que eval&uacute;a h(x) = e&middot;x / (x&sup2; + &pi;) y eval&uacute;e en x=1 y x=&pi;.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la palabra clave de funci&oacute;n an&oacute;nima, la constante de &pi; y el valor num&eacute;rico del argumento.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+h = <span class="code-placeholder" id="q13-part1" contenteditable="true">[...]</span> x: math.e * x / (x ** 2 + math.<span class="code-placeholder" id="q13-part2" contenteditable="true">[...]</span>)
+
+print(f"h(1) = {h(<span class="code-placeholder" id="q13-part3" contenteditable="true">[...]</span>):.4f}")
+print(f"h(&pi;) = {h(math.pi):.4f}")</pre>
+      </div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(13)">Verificar Respuesta</button>
+      <div id="q13-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 14 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q14">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">14. Combinaci&oacute;n de Funciones Racionales</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo con dos funciones racionales f1(x) = &pi;/(x&sup2;+1) y f2(x) = e&middot;x/(x+&pi;), y una tercera que las combina.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Complete el exponente, el nombre de la funci&oacute;n invocada y el argumento num&eacute;rico.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def f1(x):
+    return math.pi / (x ** <span class="code-placeholder" id="q14-part1" contenteditable="true">[...]</span> + 1)
+
+def f2(x):
+    return math.e * x / (x + math.pi)
+
+def combinar(x):
+    return f1(x) + <span class="code-placeholder" id="q14-part2" contenteditable="true">[...]</span>(x)
+
+print(f"f1(1)+f2(1) = {combinar(<span class="code-placeholder" id="q14-part3" contenteditable="true">[...]</span>):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>f1(1)+f2(1) = 2.2272</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(14)">Verificar Respuesta</button>
+      <div id="q14-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 15 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q15">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">15. Composici&oacute;n de Funciones t(t(x))</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n t(x) = (&pi;x+e)/(2x-1) y una lambda que la compone consigo misma: t(t(x)).</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Defina el par&aacute;metro, use lambda para la composici&oacute;n y el nombre de la variable compuesta.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def t(<span class="code-placeholder" id="q15-part1" contenteditable="true">[...]</span>):
+    return (math.pi * x + math.e) / (2 * x - 1)
+
+compuesta = <span class="code-placeholder" id="q15-part2" contenteditable="true">[...]</span> x: t(t(x))
+
+print(f"t(3)    = {t(3):.4f}")
+print(f"t(t(3)) = {<span class="code-placeholder" id="q15-part3" contenteditable="true">[...]</span>(3):.4f}")</pre>
+      </div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(15)">Verificar Respuesta</button>
+      <div id="q15-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- SECCI&Oacute;N D: Funciones Exponenciales Avanzadas -->
+    <!-- ================================================================== -->
+    <h3 class="text-lg font-semibold text-blue-600 border-b border-blue-300 pb-2">Secci&oacute;n D &mdash; Funciones Exponenciales: identidades, distribuci&oacute;n normal y modelado (8 puntos)</h3>
+
+    <!-- Pregunta 16 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q16">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">16. Identidad e<sup>ln(x)</sup> = x</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que verifica la identidad e<sup>ln(x)</sup> = x usando <code>math.exp</code> y <code>math.log</code>.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la funci&oacute;n exponencial y la funci&oacute;n de logaritmo natural anidadas.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+x = 7.0
+resultado = math.<span class="code-placeholder" id="q16-part1" contenteditable="true">[...]</span>(math.<span class="code-placeholder" id="q16-part2" contenteditable="true">[...]</span>(x))
+print(f"e^(ln({x})) = {resultado:.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>e^(ln(7.0)) = 7.0000</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(16)">Verificar Respuesta</button>
+      <div id="q16-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 17 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q17">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">17. Campana de Gauss Normalizada</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la distribuci&oacute;n normal: g(x) = [1/(&sigma;&radic;(2&pi;))] &middot; e<sup>-&frac12;((x-&mu;)/&sigma;)&sup2;</sup>.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Complete el operador de potencia para elevar al cuadrado la expresi&oacute;n.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def gauss(x, mu=0, sigma=1):
+    coef = 1 / (sigma * math.sqrt(2 * math.pi))
+    return coef * math.exp(-0.5 * ((x - mu) / sigma) <span class="code-placeholder" id="q17-part1" contenteditable="true">[...]</span> 2)
+
+print(f"g(0) = {gauss(0):.4f}")
+print(f"g(1) = {gauss(1):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>g(0) = 0.3989</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(17)">Verificar Respuesta</button>
+      <div id="q17-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 18 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q18">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">18. Crecimiento Exponencial P(t) = P<sub>0</sub> &middot; e<sup>kt</sup></h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n que modela crecimiento exponencial P(t) = P<sub>0</sub> &middot; e<sup>kt</sup>.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use el par&aacute;metro de poblaci&oacute;n inicial, la funci&oacute;n exponencial y el par&aacute;metro temporal.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def crecimiento(<span class="code-placeholder" id="q18-part1" contenteditable="true">[...]</span>, k, t):
+    return P0 * math.<span class="code-placeholder" id="q18-part2" contenteditable="true">[...]</span>(k * <span class="code-placeholder" id="q18-part3" contenteditable="true">[...]</span>)
+
+<span class="code-comment"># Poblaci&oacute;n inicial 1000, tasa 0.05, tiempo 10</span>
+print(f"P(10) = {crecimiento(1000, 0.05, 10):.2f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>P(10) = 1648.72</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(18)">Verificar Respuesta</button>
+      <div id="q18-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 19 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q19">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">19. f(x) = &pi; &middot; e<sup>2x</sup> con input</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n que eval&uacute;a f(x) = &pi; &middot; e<sup>2x</sup> y solicita x al usuario.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la constante &pi;, la funci&oacute;n exponencial y la funci&oacute;n de entrada.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def f(x):
+    return math.<span class="code-placeholder" id="q19-part1" contenteditable="true">[...]</span> * math.<span class="code-placeholder" id="q19-part2" contenteditable="true">[...]</span>(2 * x)
+
+valor = float(<span class="code-placeholder" id="q19-part3" contenteditable="true">[...]</span>("Ingrese x: "))
+print(f"&pi;&middot;e^(2&middot;{valor}) = {f(valor):.4f}")</pre>
+      </div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(19)">Verificar Respuesta</button>
+      <div id="q19-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 20 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q20">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">20. Vida Media y Decaimiento N(t) = N<sub>0</sub>&middot;e<sup>-&lambda;t</sup></h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que calcula la vida media t&frac12; = ln(2)/&lambda; y el decaimiento N(t) = N<sub>0</sub>&middot;e<sup>-&lambda;t</sup>.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la funci&oacute;n logar&iacute;tmica, el signo negativo del exponente y la variable temporal.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def vida_media(lam):
+    return math.<span class="code-placeholder" id="q20-part1" contenteditable="true">[...]</span>(2) / lam
+
+def decaimiento(N0, lam, t):
+    return N0 * math.exp(<span class="code-placeholder" id="q20-part2" contenteditable="true">[...]</span>lam * <span class="code-placeholder" id="q20-part3" contenteditable="true">[...]</span>)
+
+lam = 0.1
+print(f"Vida media: {vida_media(lam):.2f}")
+print(f"N(5) = {decaimiento(500, lam, 5):.2f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>Vida media: 6.93</code> y <code>N(5) = 303.27</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(20)">Verificar Respuesta</button>
+      <div id="q20-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- SECCI&Oacute;N E: Funciones Logar&iacute;tmicas Avanzadas -->
+    <!-- ================================================================== -->
+    <h3 class="text-lg font-semibold text-blue-600 border-b border-blue-300 pb-2">Secci&oacute;n E &mdash; Funciones Logar&iacute;tmicas: identidades, cambio de base y propiedades (8 puntos)</h3>
+
+    <!-- Pregunta 21 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q21">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">21. Verificaci&oacute;n de Identidad ln(e<sup>x</sup>) = x</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que verifica la identidad logar&iacute;tmica ln(e<sup>x</sup>) = x.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la funci&oacute;n de logaritmo natural y la variable dentro de exp.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+x = 5
+resultado = math.<span class="code-placeholder" id="q21-part1" contenteditable="true">[...]</span>(math.exp(<span class="code-placeholder" id="q21-part2" contenteditable="true">[...]</span>))
+print(f"ln(e^{x}) = {resultado:.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>ln(e^5) = 5.0000</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(21)">Verificar Respuesta</button>
+      <div id="q21-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 22 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q22">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">22. Cambio de Base: log<sub>b</sub>(x) = ln(x) / ln(b)</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n que implementa el cambio de base usando ln(x) / ln(b).</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Ambas llamadas usan la misma funci&oacute;n de logaritmo natural de math.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def log_base(x, base):
+    return math.log(x) / math.<span class="code-placeholder" id="q22-part1" contenteditable="true">[...]</span>(base)
+
+print(f"log_3(27) = {log_base(27, 3):.4f}")
+print(f"log_5(125) = {log_base(125, 5):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>log_3(27) = 3.0000</code> y <code>log_5(125) = 3.0000</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(22)">Verificar Respuesta</button>
+      <div id="q22-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 23 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q23">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">23. Propiedad de Potencia: ln(x<sup>n</sup>) = n&middot;ln(x)</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que verifica la propiedad logar&iacute;tmica ln(x<sup>n</sup>) = n&middot;ln(x) con x = &pi; y n = 3.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la funci&oacute;n de logaritmo natural y la variable original en la segunda expresi&oacute;n.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+x = math.pi
+n = 3
+izquierda = math.<span class="code-placeholder" id="q23-part1" contenteditable="true">[...]</span>(x ** n)
+derecha = n * math.log(<span class="code-placeholder" id="q23-part2" contenteditable="true">[...]</span>)
+print(f"ln(&pi;&sup3;) = {izquierda:.4f}")
+print(f"3&middot;ln(&pi;) = {derecha:.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Ambos valores deben ser iguales: <code>3.4341</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(23)">Verificar Respuesta</button>
+      <div id="q23-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 24 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q24">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">24. Propiedad del Producto: ln(a&middot;b) = ln(a) + ln(b)</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete el c&oacute;digo que verifica la propiedad logar&iacute;tmica del producto.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la variable b en el producto y la funci&oacute;n de logaritmo natural para el segundo t&eacute;rmino.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+a, b = 8, 4
+producto_log = math.log(a * <span class="code-placeholder" id="q24-part1" contenteditable="true">[...]</span>)
+suma_logs = math.log(a) + math.<span class="code-placeholder" id="q24-part2" contenteditable="true">[...]</span>(b)
+print(f"ln(a&middot;b) = {producto_log:.6f}")
+print(f"ln(a)+ln(b) = {suma_logs:.6f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Ambos valores deben ser iguales: <code>3.465736</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(24)">Verificar Respuesta</button>
+      <div id="q24-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 25 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q25">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">25. f(x) = ln(x) + log<sub>10</sub>(x) con input</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n que combina logaritmo natural y base 10, y solicita x al usuario.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use las funciones de logaritmo natural, logaritmo base 10 y la conversi&oacute;n a decimal.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def f(x):
+    return math.<span class="code-placeholder" id="q25-part1" contenteditable="true">[...]</span>(x) + math.<span class="code-placeholder" id="q25-part2" contenteditable="true">[...]</span>(x)
+
+valor = <span class="code-placeholder" id="q25-part3" contenteditable="true">[...]</span>(input("Ingrese x (positivo): "))
+print(f"ln({valor}) + log&sub1;&sub0;({valor}) = {f(valor):.4f}")</pre>
+      </div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(25)">Verificar Respuesta</button>
+      <div id="q25-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- SECCI&Oacute;N F: Funciones Mixtas -->
+    <!-- ================================================================== -->
+    <h3 class="text-lg font-semibold text-blue-600 border-b border-blue-300 pb-2">Secci&oacute;n F &mdash; Funciones Mixtas: derivaci&oacute;n num&eacute;rica e integraci&oacute;n de conceptos (8 puntos)</h3>
+
+    <!-- Pregunta 26 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q26">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">26. Derivada Num&eacute;rica de e<sup>x</sup>/(x&sup2;+&pi;)</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n que aproxima la derivada usando diferencias centradas: f'(x) &approx; [f(x+h) - f(x-h)] / (2h).</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Invoque el par&aacute;metro funci&oacute;n (func), use la variable h y pase f como argumento.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def f(x):
+    return math.exp(x) / (x ** 2 + math.pi)
+
+def derivada_numerica(func, x, h=1e-7):
+    return (<span class="code-placeholder" id="q26-part1" contenteditable="true">[...]</span>(x + h) - func(x - h)) / (2 * <span class="code-placeholder" id="q26-part2" contenteditable="true">[...]</span>)
+
+print(f"f'(0) &approx; {derivada_numerica(<span class="code-placeholder" id="q26-part3" contenteditable="true">[...]</span>, 0):.6f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>f'(0) &approx; 0.318310</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(26)">Verificar Respuesta</button>
+      <div id="q26-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 27 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q27">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">27. Funci&oacute;n Mixta g(x) = &radic;(ln(x) + &pi;)</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n que combina ra&iacute;z cuadrada, logaritmo natural y &pi;.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Anide tres funciones de math: ra&iacute;z cuadrada, logaritmo y la constante &pi;.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def g(x):
+    return math.<span class="code-placeholder" id="q27-part1" contenteditable="true">[...]</span>(math.<span class="code-placeholder" id="q27-part2" contenteditable="true">[...]</span>(x) + math.<span class="code-placeholder" id="q27-part3" contenteditable="true">[...]</span>)
+
+print(f"g(1) = {g(1):.4f}")
+print(f"g(e) = {g(math.e):.4f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>g(1) = 1.7725</code> y <code>g(e) = 2.0351</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(27)">Verificar Respuesta</button>
+      <div id="q27-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 28 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q28">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">28. Inter&eacute;s Compuesto vs Continuo</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">2 Puntos</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete las funciones que comparan inter&eacute;s compuesto A = P(1+r/n)<sup>nt</sup> vs continuo A = Pe<sup>rt</sup>.</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use las variables de capitalizaci&oacute;n (n), tiempo (t), la funci&oacute;n exponencial y la conversi&oacute;n de entrada.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def interes_compuesto(P, r, n, t):
+    return P * (1 + r / <span class="code-placeholder" id="q28-part1" contenteditable="true">[...]</span>) ** (n * <span class="code-placeholder" id="q28-part2" contenteditable="true">[...]</span>)
+
+def interes_continuo(P, r, t):
+    return P * math.<span class="code-placeholder" id="q28-part3" contenteditable="true">[...]</span>(r * t)
+
+capital = <span class="code-placeholder" id="q28-part4" contenteditable="true">[...]</span>(input("Capital inicial: "))
+print(f"Compuesto: ${interes_compuesto(capital, 0.05, 12, 10):.2f}")
+print(f"Continuo:  ${interes_continuo(capital, 0.05, 10):.2f}")</pre>
+      </div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(28)">Verificar Respuesta</button>
+      <div id="q28-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 29 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q29">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">29. Decibelios dB = 10 &middot; log<sub>10</sub>(P/P<sub>0</sub>)</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n que calcula la magnitud en decibelios dB = 10 &middot; log<sub>10</sub>(P/P<sub>0</sub>).</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la funci&oacute;n de logaritmo base 10 y el par&aacute;metro de referencia.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def decibelios(P, P0):
+    return 10 * math.<span class="code-placeholder" id="q29-part1" contenteditable="true">[...]</span>(P / <span class="code-placeholder" id="q29-part2" contenteditable="true">[...]</span>)
+
+print(f"dB = {decibelios(100, 1):.2f}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>dB = 20.00</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(29)">Verificar Respuesta</button>
+      <div id="q29-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+    <!-- Pregunta 30 -->
+    <div class="question bg-white rounded-lg shadow-sm p-5 border border-gray-200" id="q30">
+      <div class="flex justify-between items-center mb-3">
+        <h4 class="text-lg font-semibold text-gray-800">30. Entrop&iacute;a de Shannon Binaria</h4>
+        <span class="bg-blue-600 text-white px-3 py-1 rounded-md text-sm">1 Punto</span>
+      </div>
+      <div class="bg-gray-50 p-3 rounded-md mb-3">
+        <p>Complete la funci&oacute;n de entrop&iacute;a binaria de Shannon: H(p) = -[p&middot;log<sub>2</sub>(p) + (1-p)&middot;log<sub>2</sub>(1-p)].</p>
+        <p class="text-sm text-gray-600 mt-2">Sugerencia: Use la base del logaritmo y el valor de probabilidad que maximiza la entrop&iacute;a.</p>
+      </div>
+      <div class="code-container">
+<pre>import math
+
+def shannon_binaria(p):
+    return -(p * math.log(p, <span class="code-placeholder" id="q30-part1" contenteditable="true">[...]</span>) + (1 - p) * math.log(1 - p, 2))
+
+print(f"H(0.5) = {shannon_binaria(<span class="code-placeholder" id="q30-part2" contenteditable="true">[...]</span>)}")</pre>
+      </div>
+      <div class="bg-gray-100 p-2 rounded text-sm text-gray-600 mb-2">Salida esperada: <code>H(0.5) = 1.0</code></div>
+      <button class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md text-sm mt-2" onclick="checkAnswer(30)">Verificar Respuesta</button>
+      <div id="q30-feedback" class="mt-2 p-3 rounded-md"></div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Cita de cierre -->
+<div class="text-center mt-6 mb-4 text-gray-500 text-sm italic">
+  <p>&quot;Las matem&aacute;ticas son el alfabeto con el que Dios ha escrito el universo.&quot; &mdash; Galileo Galilei</p>
+  <p>&quot;La lectura es a la mente lo que el ejercicio es al cuerpo.&quot; &mdash; Joseph Addison</p>
+  <p class="mt-2 text-xs">Evaluaci&oacute;n integral generada para uso educativo &mdash; Nivel Avanzado: &pi;, e y Python.</p>
+</div>
+
+<div class="text-center mt-10">
+  <button id="calculate-btn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-lg" onclick="calculateFinalGrade()">Calcular Nota Final</button>
+</div>
+
+<div id="results" class="results mt-8 bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+  <h2 class="text-xl font-semibold text-green-800 mb-4">Resultados de la Evaluaci&oacute;n</h2>
+  <div id="results-details" class="space-y-2"></div>
+  <div id="email-notification" class="mt-4 text-center"></div>
+  <div id="score-display" class="mt-6 text-2xl font-bold text-center p-4 bg-green-600 text-white rounded-lg"></div>
+</div>
+</div>
+
+<script src="js/questions.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
